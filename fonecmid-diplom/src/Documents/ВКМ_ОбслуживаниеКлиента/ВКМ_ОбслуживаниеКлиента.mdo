@@ -7,13 +7,13 @@
     <listType typeId="370bf11e-9bc7-44db-9b60-90606819c030" valueTypeId="a4849bd9-6fee-4f99-94ac-f9ecbe55e8c8"/>
     <managerType typeId="461e8c97-28b7-476f-b2fa-5b8fc2713ce6" valueTypeId="e2306838-7fbd-4a34-b0d2-085b71c0d6a6"/>
   </producedTypes>
-  <name>ВКМ_ОбслуживаниеКлиентаs</name>
+  <name>ВКМ_ОбслуживаниеКлиента</name>
   <synonym>
     <key>ru</key>
     <value>Обслуживание клиента</value>
   </synonym>
   <useStandardCommands>true</useStandardCommands>
-  <inputByString>Document.ВКМ_ОбслуживаниеКлиентаs.StandardAttribute.Number</inputByString>
+  <inputByString>Document.ВКМ_ОбслуживаниеКлиента.StandardAttribute.Number</inputByString>
   <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
   <createOnInput>Use</createOnInput>
   <dataLockControlMode>Managed</dataLockControlMode>
@@ -63,7 +63,7 @@
     <fillChecking>ShowError</fillChecking>
     <choiceParameterLinks>
       <name>Отбор.Владелец</name>
-      <field>Document.ВКМ_ОбслуживаниеКлиентаs.Attribute.Клиент</field>
+      <field>Document.ВКМ_ОбслуживаниеКлиента.Attribute.Клиент</field>
     </choiceParameterLinks>
     <fillValue xsi:type="core:UndefinedValue"/>
     <fullTextSearch>Use</fullTextSearch>
