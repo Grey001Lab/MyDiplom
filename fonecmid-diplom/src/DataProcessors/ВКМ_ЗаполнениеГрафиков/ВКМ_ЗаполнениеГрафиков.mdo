@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="070ea64a-5c34-439f-9a5b-ce9c561f96a7">
+  <producedTypes>
+    <objectType typeId="a225792f-3aee-4ac3-b305-2f79a15f7f89" valueTypeId="f914ff99-c5b2-4365-8039-215da8c17062"/>
+    <managerType typeId="6c10ea03-547e-4c9c-ab91-4e02c519ffd3" valueTypeId="a165a332-3061-47de-9691-6ba77878fbd8"/>
+  </producedTypes>
+  <name>ВКМ_ЗаполнениеГрафиков</name>
+  <synonym>
+    <key>ru</key>
+    <value>ВКМ заполнение графиков</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.ВКМ_ЗаполнениеГрафиков.Form.Форма</defaultForm>
+  <attributes uuid="74fc4327-c915-4b3c-a085-2d5b4cd9a4b3">
+    <name>Период</name>
+    <synonym>
+      <key>ru</key>
+      <value>Период</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <format>
+      <key>ru</key>
+      <value>ДФ=ММ.гггг</value>
+    </format>
+    <editFormat>
+      <key>ru</key>
+      <value>ДФ=ММ.гггг</value>
+    </editFormat>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="89a0bf9a-0e6a-4760-bc31-77200ed4a3f8">
+    <name>ГрафикРаботы</name>
+    <synonym>
+      <key>ru</key>
+      <value>График работы</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВКМ_ГрафикРаботы</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="c3fef8c0-4f66-49fa-826a-7cd93953f30f">
+    <name>Выходные</name>
+    <synonym>
+      <key>ru</key>
+      <value>Выходные</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <forms uuid="f638a728-0b19-4baf-9061-1072b7e729d5">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DataProcessor>

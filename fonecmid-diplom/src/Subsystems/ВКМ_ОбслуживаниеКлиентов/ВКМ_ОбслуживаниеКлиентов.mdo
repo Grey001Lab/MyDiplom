@@ -11,4 +11,10 @@
   <content>Catalog.ДоговорыКонтрагентов</content>
   <content>AccumulationRegister.ВКМ_ВыполненныеКлиентуРаботы</content>
   <content>Catalog.ВКМ_ОбслуживаниеКлиентаПрисоединенныеФайлы</content>
+  <content>DataProcessor.ВКМ_МассовоеСозданиеАктов</content>
+  <content>InformationRegister.ВКМ_УсловияОплатыСотрудников</content>
+  <content>Report.ВКМ_ВыработкаСпециалистов</content>
+  <content>Report.ВКМ_АнализВыставленныхАктов</content>
+  <content>Role.ВКМ_ОтчетВыработкаСпециалистов</content>
+  <content>Role.ВКМ_ОтчетАнализВыставленныхАктов</content>
 </mdclass:Subsystem>
