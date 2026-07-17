@@ -40,12 +40,39 @@
 				</v8:item>
 			</title>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РазмерАбонентскойПлаты</dataPath>
+			<field>РазмерАбонентскойПлаты</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Размер абонентской платы</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтоимостьВыполненныхРабот</dataPath>
+			<field>СтоимостьВыполненныхРабот</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стоимость выполненных работ</v8:content>
+				</v8:item>
+			</title>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
 	ВыполненныеРаботыОбороты.Клиент КАК Клиент,
 	ВыполненныеРаботыОбороты.Договор КАК Договор,
-	ЕСТЬNULL(ВыполненныеРаботыОбороты.СуммаКОплатеПриход, 0) КАК СуммаКОплате,
-	ЕСТЬNULL(ВыполненныеРаботыОбороты.СуммаКОплатеРасход, 0) КАК ВыставленнаяСуммаКОплате
+	ЕСТЬNULL(ВыполненныеРаботыОбороты.СуммаКОплатеПриход + ВыполненныеРаботыОбороты.Договор.ВКМ_СуммаАбонентскойПлаты,
+		0) КАК СуммаКОплате,
+	ВЫБОР
+		КОГДА ЕСТЬNULL(ВыполненныеРаботыОбороты.СуммаКОплатеРасход, 0) = 0
+			ТОГДА 0
+		ИНАЧЕ ВыполненныеРаботыОбороты.СуммаКОплатеРасход + ВыполненныеРаботыОбороты.Договор.ВКМ_СуммаАбонентскойПлаты
+	КОНЕЦ КАК ВыставленнаяСуммаКОплате,
+	ВыполненныеРаботыОбороты.Договор.ВКМ_СуммаАбонентскойПлаты КАК РазмерАбонентскойПлаты,
+	ЕСТЬNULL(ВыполненныеРаботыОбороты.СуммаКОплатеПриход, 0) КАК СтоимостьВыполненныхРабот
 ИЗ
 	РегистрНакопления.ВКМ_ВыполненныеКлиентуРаботы.Обороты(&amp;НачалоПериода, &amp;КонецПериода,,) КАК ВыполненныеРаботыОбороты</query>
 	</dataSet>
@@ -70,6 +97,14 @@
 	<totalField>
 		<dataPath>ЗадолженностьПоДокументам</dataPath>
 		<expression>Сумма(ЗадолженностьПоДокументам)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СтоимостьВыполненныхРабот</dataPath>
+		<expression>Сумма(СтоимостьВыполненныхРабот)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>РазмерАбонентскойПлаты</dataPath>
+		<expression>Сумма(РазмерАбонентскойПлаты)</expression>
 	</totalField>
 	<parameter>
 		<name>НачалоПериода</name>
@@ -137,6 +172,12 @@
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>Договор</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>РазмерАбонентскойПлаты</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СтоимостьВыполненныхРабот</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>СуммаКОплате</dcsset:field>

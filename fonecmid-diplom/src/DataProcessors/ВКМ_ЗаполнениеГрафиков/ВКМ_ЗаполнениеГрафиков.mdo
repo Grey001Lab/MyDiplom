@@ -7,7 +7,7 @@
   <name>ВКМ_ЗаполнениеГрафиков</name>
   <synonym>
     <key>ru</key>
-    <value>ВКМ заполнение графиков</value>
+    <value>Заполнение графиков</value>
   </synonym>
   <useStandardCommands>true</useStandardCommands>
   <defaultForm>DataProcessor.ВКМ_ЗаполнениеГрафиков.Form.Форма</defaultForm>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mdclass:Subsystem xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="026b8410-21c6-4d84-a81b-f2f64d7ede66">
+<mdclass:Subsystem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="026b8410-21c6-4d84-a81b-f2f64d7ede66">
   <name>ВКМ_ДобавленныеОбъекты</name>
   <synonym>
     <key>ru</key>
@@ -7,6 +7,9 @@
   </synonym>
   <includeHelpInContents>true</includeHelpInContents>
   <includeInCommandInterface>true</includeInCommandInterface>
+  <picture xsi:type="core:PictureRef">
+    <picture>CommonPicture.БыстрыйДоступДобавить</picture>
+  </picture>
   <content>Document.ВКМ_ОбслуживаниеКлиента</content>
   <content>AccumulationRegister.ВКМ_ВыполненныеКлиентуРаботы</content>
   <content>Catalog.ВКМ_ОбслуживаниеКлиентаПрисоединенныеФайлы</content>
@@ -31,7 +34,6 @@
   <content>AccumulationRegister.ВКМ_ВыполненныеСотрудникомРаботы</content>
   <content>Document.ВКМ_НачислениеЗарплаты</content>
   <content>Document.ВКМ_НачислениеФиксированнойПремии</content>
-  <content>DataProcessor.ВКМ_ЗаполнениеГрафиков</content>
   <content>AccumulationRegister.ВКМ_ВзаиморасчетыССотрудниками</content>
   <content>Document.ВКМ_ГрафикОтпусков</content>
   <content>InformationRegister.ВКМ_ГрафикОтпусков</content>
@@ -46,4 +48,7 @@
   <content>Role.ВКМ_ОтчетВыработкаСпециалистов</content>
   <content>Role.ВКМ_ОтчетАнализВыставленныхАктов</content>
   <content>Role.ВКМ_ОтчётыПоЗарплатеИОтпускам</content>
+  <content>CommandGroup.ВКМ_Справочники</content>
+  <content>CommandGroup.ВКМ_СмТакже</content>
+  <content>DataProcessor.ВКМ_ЗаполнениеГрафиков</content>
 </mdclass:Subsystem>
